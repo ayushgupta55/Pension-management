@@ -1,0 +1,42 @@
+<button class="btn btn-primary" (click)="LogOut()" id="out">Logout</button>
+
+<div class="Search">
+<form class="row g-3">
+    <div class="col-md-4">
+      <label for="validationServer01" class="form-label" >Search Aadhar Number</label>
+      <input type="text" placeholder="Enter Aadhar Number" type="number" class="form-control" id="validationServer01" required 
+      (change)="setAadhar($event)">
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit" (click)="searchAadhar()">Submit Aadhar Number</button>
+    </div>
+  </form>
+</div>
+  <br>
+
+  <span *ngIf="isInvalid" >
+<div class="main-error" style="text-align: center;">
+  <p class="wrongAadharNumber">Invalid pensioner detail provided, please provide valid detail</p>
+</div>
+</span>
+	<!-- <div class="error">Error message</div> -->
+
+
+<div style="text-align: center;">
+  <p style="background-color: rgb(65, 174, 225);"><span *ngIf="details.name!=null">Pension Amount: </span>{{details.pensionAmount}}</p>
+  <p style="background-color: rgb(65, 174, 225);"><span *ngIf="details.name!=null">Service Charge: </span>{{details.serviceCharge}}</p>
+  <p><span *ngIf="details.name!=null">Aadhar Number: {{details.aadharNumber}}</span></p>
+  <p><span *ngIf="details.name!=null">Name: </span>{{details.name}}</p>
+  <p><span *ngIf="details.name!=null">Date Of Birth: </span>{{details.dateOfBirth}}</p>
+  <p><span *ngIf="details.name!=null">PAN: </span>{{details.pan}}</p>
+  <p><span *ngIf="details.name!=null">Salary Earned: </span>{{details.salaryEarned}}</p>
+  <p><span *ngIf="details.name!=null">Allowance: </span>{{details.allowance}}</p>
+  <p><span *ngIf="details.name!=null">Pension Type: </span>{{details.pensionType}}</p>
+  <p><span *ngIf="details.name!=null">Bank Name: </span>{{details.bankName}}</p>
+  <p><span *ngIf="details.name!=null">Account Number: </span>{{details.accountNumber}}</p>
+  <p><span *ngIf="details.name!=null">Bank Account Type: </span>{{details.bankAccountType}}</p>
+</div>

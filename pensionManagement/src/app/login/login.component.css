@@ -1,0 +1,25 @@
+.main-div mat-card {
+    padding: 0px;
+    /* position: relative; */
+}
+
+.login-form {
+    padding: 20px;
+}
+
+.wrongCreds { 
+    color: #D8000C;
+	background-color: #FFBABA; 
+    border-radius: 5px;
+}
+
+.main-error {
+    margin: 20px 510px;
+    background-repeat: no-repeat;
+}
+
+div.main-error {
+    position: relative;
+    top: -140px;
+    /* right: 0; */
+  }
